@@ -3,8 +3,8 @@
 	"name": "C# (.NET)",
 	
 	// Use dotnet image. 
-	// Documentation: https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/dotnet/about
-	// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet	
+	// About: https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/dotnet/about
+	// Readme: https://github.com/devcontainers/templates/tree/main/src/dotnet	
 	//"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	//"features": {
