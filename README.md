@@ -20,3 +20,18 @@ az group delete --name <your-resource-group-name>
 | azd povision | Provisions the environment |
 | azd deploy   | Deploys the applications |
 | azd down    | Clean up resources |
+
+## Configure Development SSL certificate in host/local
+
+# Execute in Windows host
+dotnet dev-certs https --export-path ./aspnetapp.pfx --password password
+dotnet dev-certs https --trust
+# Restart Windows host
+
+# Copy .pfx file to Linux container at /home/vscode
+
+# Execute in Linux container
+cd /home/vscode
+dotnet dev-certs https --clean --import ./aspnetapp.pfx --password password
+dotnet dev-certs https --trust
+# Restart container app

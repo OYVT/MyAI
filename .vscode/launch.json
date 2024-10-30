@@ -12,6 +12,7 @@
             "args": [],
             "cwd": "${workspaceFolder}/src/MyAI.AppHost",
             "stopAtEntry": false,
+            "preLaunchTask": "dotnet: build",
             "launchSettingsProfile": "https",
             "serverReadyAction": {
                 "action": "openExternally",

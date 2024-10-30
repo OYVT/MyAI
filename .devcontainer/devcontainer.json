@@ -4,23 +4,38 @@
 	"name": "C# (.NET)",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
+	// Features to add to the dev container. More info: https://containers.dev/features.
 	//"features": {
 	//	"ghcr.io/devcontainers/features/dotnet:2": {}
-	//}
+	//},
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	//"runArgs": ["--dev-cert-password"], 
+	//"build": {
+	//	"dockerfile": "Dockerfile",
+	//	"args": {
+	//		"VARIANT": "3.1"
+	//	}
+	//},
+
+	//"containerEnv": {
+	//},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [5000, 5001],
-	// "portsAttributes": {
-	//		"5001": {
-	//			"protocol": "https"
-	//		}
-	// }
+	"forwardPorts": [17210, 5489, 5051],
+	"portsAttributes": {
+		"17210": {
+			"protocol": "https"
+		},
+		"5489": {
+			"protocol": "https"
+		},
+		"5051": {
+			"protocol": "https"
+		}
+	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo dotnet workload restore",
+	"postCreateCommand": "sudo dotnet workload install aspire",
 
 	// Configure tool-specific properties.
 	"customizations": {
