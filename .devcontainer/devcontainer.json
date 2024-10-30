@@ -1,21 +1,25 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
 {
 	"name": "C# (.NET)",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
+	
+	// Use dotnet image. 
+	// Documentation: https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/dotnet/about
+	// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet	
+	//"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	//"features": {
-	//	"ghcr.io/devcontainers/features/dotnet:2": {}
-	//},
-
-	//"runArgs": ["--dev-cert-password"], 
-	//"build": {
-	//	"dockerfile": "Dockerfile",
-	//	"args": {
-	//		"VARIANT": "3.1"
+	//	"ghcr.io/devcontainers/features/dotnet:2": {},
+	//	"ghcr.io/devcontainers/features/azure-cli:1": {
+	//		"version": "latest"
 	//	}
 	//},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	//"postCreateCommand": "sudo dotnet workload install aspire",
+
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 
 	//"containerEnv": {
 	//},
@@ -34,14 +38,12 @@
 		}
 	},
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo dotnet workload install aspire",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-dotnettools.csdevkit"
+				"ms-dotnettools.csdevkit",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 
