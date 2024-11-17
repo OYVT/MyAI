@@ -1,5 +1,9 @@
 # MyAI
-Project intended to experiment with Dev Containers, .Net Aspire, Azure Developer CLI, and AI tooling
+Experimentation playground for:
+- Dev Containers
+- .Net Aspire
+- Azure Developer CLI
+- AI tooling
 
 ## Build Aspire manifest
 cd ./src/MyAI.AppHost
